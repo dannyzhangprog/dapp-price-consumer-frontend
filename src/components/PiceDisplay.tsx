@@ -3,7 +3,7 @@
 import { useReadContract } from 'wagmi'
 import PriceConsumerABI from '../contracts/PriceConsumer.json'
 
-const CONTRACT_ADDRESS = '0xB602305340BCCaE16d0D9A5Dc8Df95E074560DF5' // 替换为你的合约地址
+const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as `0x${string}`
 
 export default function PriceDisplay() {
   // 1. 读取最新价格
